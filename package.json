@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --testPathIgnorePatterns=src/__tests__/utils",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,6 +39,8 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1",
+    "@testing-library/react-hooks": "^5.0.0",
+    "cypress": "^6.2.1",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-prettier": "^3.3.1"
