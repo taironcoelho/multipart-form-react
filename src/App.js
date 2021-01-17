@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import RegisterForm from './components/RegisterForm/RegisterForm';
+import {Container, Typography} from '@material-ui/core';
+import FormValidation from './contexts/FormValidation';
+import {validateCPF, validatePassword} from './models/register';
 import './App.css';
+import 'fontsource-roboto';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container component="article" maxWidth="sm">
+      <Typography variant="h3" component="h1" align="center">
+        Register form
+      </Typography>
+      <FormValidation.Provider
+        value={{cpf: validateCPF, password: validatePassword}}
+      >
+        <RegisterForm onSubmit={onFormSubmit} />
+      </FormValidation.Provider>
+    </Container>
   );
+}
+
+function onFormSubmit(data) {
+  console.log(data);
 }
 
 export default App;
