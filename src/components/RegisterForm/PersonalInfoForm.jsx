@@ -47,6 +47,7 @@ function PersonalInfoForm({onSubmit}) {
       />
       <TextField
         value={cpf}
+        required
         onChange={event => {
           setCpf(event.target.value);
         }}
