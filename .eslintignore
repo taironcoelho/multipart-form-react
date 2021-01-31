@@ -1,0 +1,10 @@
+**/node_modules/
+**/stories/
+**/lib/proa-react/
+**/coverage/
+**/mock-server/
+**/builds/
+**/scripts/
+**/__tests__/
+*.test.js
+**/cypress/
